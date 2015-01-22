@@ -1,5 +1,10 @@
 package calculadoram5grup2;
-import calculadora.*;
+
+import calculadora.Divisio;
+import calculadora.Resta;
+import calculadora.Residu;
+import calculadora.Suma;
+import calculadora.Multiplicacio;
 import java.util.Scanner;
 
 public class CalculadoraM5Grup2 {
@@ -10,16 +15,21 @@ public class CalculadoraM5Grup2 {
                 String cadena = entrada.nextLine();
                 
                 try {
-                    if(cadena.charAt(0) == '|') continue; // comentaris
+                    if(cadena.charAt(0) == '|') {
+                        continue; // comentaris
+                    }
                     
                     // partim la entrada en 3 parts, numero 1, signe i numero 2
                     String [] parts = cadena.split(" ");
                     
                     // mirem que la entrada sigue valida
-                    if (parts.length > 3) System.out.println("Error"); 
-                    else if (parts.length < 3) System.out.println("Error");
-                    else if (parts[1].length() > 1) System.out.println("Error");
-                    // operem
+                    if (parts.length > 3) {
+                        System.out.println("Error");
+                    } else if (parts.length < 3) {
+                        System.out.println("Error");
+                    } else if (parts[1].length() > 1) {
+                        System.out.println("Error");
+                    } // operem
                     else {
                         int num1 = Integer.parseInt(parts[0]);
                         int num2 = Integer.parseInt(parts[2]);
